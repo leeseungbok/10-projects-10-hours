@@ -1,0 +1,24 @@
+ question: "what is the lightsaber color of sith?",
+        a:  "green",
+        b: "blue",
+        c: "red",
+        d: "purple",
+        correct: "c"
+
+    }, 
+    {
+        question: "what is the minbok lee real name?",
+        a: "manbok",
+        b: "chijill",
+        c: "minbook",
+        d: "ddongko",
+        correct: "d"
+    },
+    {
+        question: "what does 'fuck you' mean exactly?",
+        a: "엿 먹어",
+        b: "ㅈ ㄲ!",
+        c: "ㄱㅅㄲ",
+        d: "널 강간하겠어",
+        correct: "d"
+    }

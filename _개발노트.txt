@@ -1,0 +1,114 @@
+
+
+2022.08.26
+
+    ##############################################################################
+    ## LSB: 매우 중요하니 꼭 이해하세요!!!
+    ##############################################################################
+    return lowerLetters_s[Math.floor(Math.random() * lowerLetters_s.length)];
+    위의 한줄은 아래의 6가지 역할을 한다.
+
+    1. Math.random() -> 임의로 0.0 ~ 0.9999 사이의 숫자를 하나(예: 0.9234) 가져온다
+    2. lowerLetters_s.length -> 소문자열의 길이(예: 26)를 구한다.
+    3. Math.random() * lowerLetters_s.length -> 1번결과값(0.09234)과 2번 결과값(26)을 곱한다(2.40084)
+    4. Math.floor(Math.random() * lowerLetters_s.length) -> 3번의 결과에서 뒤의 소숫점을 날린다(2)
+    5. lowerLetters_s[Math.floor(Math.random() * lowerLetters_s.length)] -> 4에서 구한 값(2)을 인덱스로 사용해서 소문자 스트링에서 하나의 문자('c')를 가져온다
+    6. return lowerLetters_s[Math.floor(Math.random() * lowerLetters_s.length)] -> 5번 결과('c')를 함수를 호출한 곳으로 돌려준다
+    ##############################################################################
+
+
+    ##############################################################################
+    /* LSB: 화면을 보여줄때 적용됨 => Y축에서 101만큼 overview_div를 아래로 내려라 */
+    transform: translateY(101%);
+
+
+    ##############################################################################
+    ## LSB: 중요 -> 마우스 이벤트에 함수를 등록하는 3가지 방법
+    // 1번방법
+    let mouse_down_Event = function registerEvent_MouseDown(event) {
+        isPressed_b = true;
+        pressed_x_i = event.offsetX;
+        pressed_y_i = event.offsetY;
+    }
+    canvas_div.addEventListener("mousedown", mouse_down_Event);
+
+    // 2번방법: 함수가 매우 길어지면 이 방법을 사용한다.
+    function registerEvent_MouseDown(event) {
+        isPressed_b = true;
+
+        pressed_x_i = event.offsetX;
+        pressed_y_i = event.offsetY;
+    }
+    canvas_div.addEventListener("mousedown", registerEvent_MouseDown);
+
+    // 3번방법 -> 직관적이고 보기 좋다.
+    canvas_div.addEventListener("mousedown", (event) => {
+        isPressed_b = true;
+        pressed_x_i = event.offsetX;
+        pressed_y_i = event.offsetY;        
+    });
+
+    ##############################################################################
+    # LSB: 이동한 x,y좌표값을 초기 x,y좌표값(시작점)으로 바꾼다.
+    pressed_x_i = moved_x_i;
+    pressed_y_i = moved_y_i; 
+
+    print('mouse move: isPressed_b, x, y', `${isPressed_b}, ${pressed_x_i}, ${pressed_y_i}`);
+
+    ##############################################################################
+    display: inline-block; /* LSB: 그냥 inline으로 display하면 margin을 줄수 없다.*/
+
+    ##############################################################################
+    LSB: 딕셔너리를 보기좋게 프린트하는법
+    ## JSON.stringify(weather_d, null, 4) 
+
+    ##############################################################################
+    /* LSB: 하나의 버튼을 맨 오른쪽에 배치하는 트릭 */
+    .drawing_app .toolbox_div > *:last-child {
+        margin-left: auto;
+    } 
+
+
+
+2022.08.26
+
+  1. 딕셔너리를 보기좋게 프린트하는법
+    JSON.stringify(weather_d, null, 4)
+    =>
+    {
+        "coord": {
+            "lon": 127.4167,
+            "lat": 36.3333
+        },
+        "weather": [
+            {
+                "id": 800,
+                "main": "Clear",
+                "description": "clear sky",
+                "icon": "01d"
+            }
+        ],
+        ....
+      } 
+
+  2. unix timestamp 이란
+      1970년 이후부터 현재까지 지난 초의 합
+      1년 초
+      - 60*60*24*365=31,536,000초
+      - 2022년 현재 초값: 22년지났으니까
+        31,536,000 * 22 = 1,639,872,000초 이상이 됨
+      moment.unix(1661477111).format('MM/DD/YYYY')
+      '08/26/2022'
+
+  3. 외부 라이브러리(예: moment) 가져와서 사용하는법
+     moment는 javascript 에서 날짜,시간과 관련된 가장 좋은 라이브러리다.
+
+      1. google에서 해당 라이브러리 cdn(content delivery network)을 구한다.
+        "javascript mement cdn" 라고 검색
+
+      2. 검색결과를 index.html 헤더에 첨가한다.
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" defer></script>
+
+      3. js파일에서 사용한다.  
+      moment.unix(1661477111).format('MM/DD/YYYY')
+      

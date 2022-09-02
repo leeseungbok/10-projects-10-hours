@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body> 
+    <div class="recipe_app">
+        <div class="rContainer_div">
+            <header class="rHeader_hd">
+                <input type="text" class="searchTerm_inp" />
+                <button class="search_btn"><i class="fas fa-search"></i></button>
+            </header>
+            <div class="rSimple_div">
+                <h3>Favorite Meals</h3>
+                <ul class="favMeals_ul"></ul>
+            </div>
+            <div class="rDetail_div"></div>
+        </div>
+
+        <div class="rPopup_div hidden_div" >
+            <button class="closePopup_div">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="mealInfo_div"></div>            
+        </div>
+    </div>
+</body>
+
+</html>

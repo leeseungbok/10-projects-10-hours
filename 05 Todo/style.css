@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+    /* border: 1px dashed gray; */
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.todos_app {
+    border: 2px solid #f2f2f2;
+    background-color: white;    
+    font-family: "Poppins", sans-serif;
+    width: 500px;
+}
+
+.todos_app .todoHeader_h1 {
+    margin: 1rem;
+    color: rgb(179, 131, 226);
+    font-size: 10rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.todos_app .todoBody_form {
+    display: block;
+    margin: 1rem;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    /* max-width: 100%; */
+    border: 4px solid #f2f2f2;
+}
+
+.todos_app .todo_input {
+    border: none;
+    color: #444;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    display: block;
+    /* outline: none; */
+    outline-color: rgb(192, 190, 190);
+    /* width: 100%; */
+}
+
+.todos_app .todo_input::placeholder {
+    color: #d5d5d5;
+}
+
+.todos_app .todos_ul {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.todos_app .todos_ul li {
+    border-top: 1px solid #e5e5e5;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+.todos_app .todos_ul li.completed {
+    color: #b6b6b6;
+    text-decoration: line-through;
+}
+
+.todos_app .todoDesc_small {
+    display:block;
+    color: #b5b5b5;
+    text-align: center;
+    margin: 1rem;
+}

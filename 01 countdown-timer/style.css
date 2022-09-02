@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    border: 1px dashed gray;
+}
+
+/* body {
+    background-image: url("./snow.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "poppins", sans-serif;
+    height: 100vh;
+    margin: 0;
+} */
+
+.newyearTimer_app {
+    background-image: url("./snow.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "poppins", sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+.newyearTimer_app h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 5rem;
+    margin-top: 5rem;
+}
+
+.newyearTimer_app .body_div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;    
+}
+/* .newyear-timer_app_div .countdown-el_div{
+    text-align: center;
+} */
+.newyearTimer_app .childDays_p {
+    color: green;
+}
+
+.newyearTimer_app .childHours_p{
+    color: blue;
+}
+
+.newyearTimer_app .childMins_p {
+    color: red;
+}
+
+.newyearTimer_app .childSeconds_p {
+    color: purple;
+}
+
+.newyearTimer_app .body_div .number_p{
+    font-weight: bold;
+    font-size: 8rem;
+    line-height: 1;
+    width: 2em;
+    margin: 0.5rem 0;
+}
+
+.newyearTimer_app .body_div span{
+    font-weight: bold;
+    font-size: 1.5rem;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>password-app</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <div class="pwGenerator_app">
+            <div class="pwgHeader_div">
+                <span class="pw_span">l823Zs78#Css09@</span>
+                <button class="pwCopy_btn">copy</button>
+            </div>
+            <form class="pwgBody_form">
+                <div class="formControl_div">
+                    <label for="pwLen_input">password Length</label>
+                    <input id="pwLen_input" value="15" type="number" min="2" max="30" />                
+                </div>
+            
+                <div class="formControl_div">
+                    <label for="pwStrUpper_checkbox">Contain_pw Upper</label>
+                    <input id="pwStrUpper_checkbox" type="checkbox"/>
+                </div> 
+
+                <div class="formControl_div">
+                    <label for="pwStrLower_checkbox">Contain_pw Lower</label>
+                    <input id="pwStrLower_checkbox" type="checkbox" />
+                </div>
+            
+                <div class="formControl_div">
+                    <label for="pwNumber_checkbox">Contain_pw Number</label>
+                    <input id="pwNumber_checkbox" type="checkbox" />
+                </div>
+        
+                <div class="formControl_div">
+                    <label for="pwSymbol_checkbox">Contain_pw Symbol</label>
+                    <input id="pwSymbol_checkbox" type="checkbox" />
+                </div>
+                <button class="generatePw_btn">Generate password</button>
+            </form>            
+        </div>
+    </body>
+</html>

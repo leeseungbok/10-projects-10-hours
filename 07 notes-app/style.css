@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+    border: 1px dashed gray;
+}
+
+body {
+    
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    margin: 0;
+}
+.notes_app {
+    background-color: #7bdaf3;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+.notes_app .add_btn {
+    background-color: #9ec862;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    position: fixed;
+    top: 0.5rem;
+    right: 1rem;
+}
+
+.notes_app .note_div {
+    background-color: #fff;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+    margin: 40px;
+    height: 500px;
+    width: 500px;
+}
+
+.notes_app .note_div .tools_div {
+    background-color: #9ec862;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+}
+
+.notes_app .note_div .tools_div button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.notes_app .note_div .view_div {
+    background-color: gray;
+    overflow: auto;
+    height: 400px;
+    width: 100%;
+}
+
+.notes_app .note_div .edit_ta {
+    outline: none;
+    font-family: inherit;
+    font-size: 1rem;
+    border: none;
+    height: 400px;
+    width: 100%;
+}
+
+.notes_app .note_div .hidden {
+    display: none;
+}

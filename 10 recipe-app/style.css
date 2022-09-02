@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    /* border: 1px dashed gray; */
+}
+
+body {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe_app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+.recipe_app .rContainer_div {
+    background-color: #fff;
+    box-shadow: 0 0 10px 2px #3333331a;
+    border-radius: 3px;
+    overflow: hidden;
+    width: 400px;
+}
+
+.recipe_app .rContainer_div header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.recipe_app .rContainer_div header input {
+    background-color: #eee;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    padding: 0.5rem 1rem;
+    outline: none;
+    /* outline-style: 1px dashed gray; */
+}
+
+
+.recipe_app .rContainer_div header button {
+    background-color: transparent;
+    border: none;
+    color: rgb(138, 129, 141);
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.recipe_app .rContainer_div .rSimple_div {
+    background-color: rgb(243, 225, 255);
+    padding: 0.25rem 1rem;
+    display: center;
+}
+
+.recipe_app .rContainer_div .favMeals_ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.recipe_app .rContainer_div .favMeals_ul li {
+    cursor: pointer;
+    position: relative;
+    margin: 5px;
+    width: 75px;
+}
+
+.recipe_app .rContainer_div .favMeals_ul li .clear {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    font-size: 1.2rem;
+}
+
+.recipe_app .rContainer_div .favMeals_ul li:hover .clear {
+    opacity: 1;
+}
+
+.recipe_app .rContainer_div .favMeals_ul li img {
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px #3333331a;
+    object-fit: cover;
+    height: 70px;
+    width: 70px;
+}
+
+.recipe_app .rContainer_div .favMeals_ul li span {
+    display: inline-block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75px;
+}
+
+.recipe_app .meal {
+    border-radius: 3px;
+    box-shadow: 0 0 10px 2px #3333331a;
+    cursor: pointer;
+    margin: 1.5rem;
+    overflow: hidden;
+}
+
+.recipe_app .meal-header {
+    position: relative;
+}
+
+.recipe_app .meal-header .random {
+    position: absolute;
+    top: 1rem;
+    background-color: #fff;
+    padding: 0.25rem 1rem;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.recipe_app .meal-header img {
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+}
+
+.recipe_app .meal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.recipe_app .meal-body h4 {
+    margin: 0;
+}
+
+.recipe_app .meal-body .fav-btn {
+    border: none;
+    background-color: transparent;
+    color: rgb(197, 188, 188);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.recipe_app .meal-body .fav-btn.active {
+    color: rebeccapurple;
+}
+.recipe_app .rPopup_div {
+
+    background-color: white;
+    border-radius: 5px;
+    padding: 0 2rem;
+    position: absolute; 
+    top: 2rem;
+}
+
+.recipe_app .rPopup_div.hidden_div {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.recipe_app .rPopup_div .mealInfo_div h1 {
+    text-align: center;
+}
+
+.recipe_app .rPopup_div .closePopup_div {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    /* position: absolute;
+    top: 1rem;
+    right: 1rem; */
+}
